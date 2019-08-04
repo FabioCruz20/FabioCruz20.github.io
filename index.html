@@ -4,6 +4,27 @@
     <title>EI</title>
   </head>
   <body>
-    <p>FUNCIONA?</p>
+    <script>
+      window.fbAsyncInit = function() {
+        
+        FB.init({
+        appId            : '352830282324845',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v4.0'
+        });
+        
+        FB.getLoginStatus(response => {
+          if (response.status === 'connected') {
+            alert('conectado');
+          }
+          else {
+            alert('desconectado');
+          }
+        });
+        
+      };
+    </script>
   </body>
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 </html>
